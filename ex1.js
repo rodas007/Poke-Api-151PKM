@@ -8,8 +8,10 @@ const arrayPoke = async () => {
     const rawCards = await fetch(baseDatos);
   const formattedCards = await rawCards.json();
   allPoke.push(formattedCards);
+  
+  }}
   pokemonCards(allPoke)
-  }}}
+}
 
 
 
@@ -21,16 +23,16 @@ const arrayPoke = async () => {
       const titulo$$ = document.createElement("h2");
       const image$$ = document.createElement("img");
       const description$$ = document.createElement("p");
-  
+      const description2$$ = document.createElement("p");
       titulo$$.textContent = card.name; 
-      image$$.src = card.sprites.back_default;
-      image$$.alt = card.spanishName; 
-      description$$.textContent = card.meaning; 
-  
+      image$$.src = card.sprites.other["official-artwork"].front_default;
+    
+      description$$.textContent = card.types[0].type.name;
+      //description2$$.textContent = card.types[1].type.name
       figure$$.appendChild(titulo$$);
       figure$$.appendChild(image$$);
       figure$$.appendChild(description$$)
-      
+      figure$$.appendChild(description2$$)
       document.body.appendChild(figure$$)
   
     });
