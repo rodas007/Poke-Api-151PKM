@@ -1,6 +1,29 @@
 
 const allPoke = [] 
 const main$$ = document.querySelector(".b-gallery")
+let sound = true;
+let miAudio = document.getElementById("Audio-2")
+let audioOff = document.getElementById("img")
+
+
+
+
+function sonido(){
+  if(sound){
+     
+     miAudio.src="./assets/audio/opening.mp3";	
+     miAudio.volume = 0.7;
+     miAudio.play();	
+     
+  }
+  else
+    sound=false;
+  //audioOff.addEventListener( 'click', () => miAudio.stop())
+}
+
+
+
+
 const arrayPoke = async () => {
   
     if (allPoke.length ===0) {
@@ -64,7 +87,7 @@ if(card.name.toLowerCase().includes(input$$.value.toLowerCase())){
 
   const input$$ = document.querySelector('input');
   input$$.addEventListener('input', () => pokemonCards(allPoke))
-  console.log(input$$.value);
+  
   
   arrayPoke();
-  console.log(allPoke)
+  
