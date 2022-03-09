@@ -1,9 +1,44 @@
 body{
+    
+    background-color: rgb(250, 242, 231);
+    
+}
+.b-gallery{
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
-    background-color: rgb(250, 242, 231);
     
+}
+
+.b-logo{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+   
+}
+
+.b-logo img{
+    
+    border: none;
+    border-radius:none;
+    background-color: rgb(250, 242, 231);
+    width: 500px;
+   height: 184px;
+}
+
+.b-search{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+   
+}
+
+.b-search input{
+height: 34px;
+width: 300px;
+
 }
 
 
@@ -28,3 +63,23 @@ figure{
     border: 5px solid  ;
     border-radius: 20px;
 }
+
+p{
+   
+
+border-radius: 20px;
+color: #030202;
+background-color: aqua;
+padding: 5px 20px;
+    border-radius: 20px;
+}
+div   {
+display: flex;
+ justify-content: space-around;
+  
+    
+
+
+}
+
+
