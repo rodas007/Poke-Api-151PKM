@@ -12,7 +12,7 @@ function sonido(){
   if(sound){
      
      miAudio.src="./assets/audio/opening.mp3";	
-     miAudio.volume = 0.7;
+     miAudio.volume = 0.2;
      miAudio.play();	
      
   }
@@ -35,6 +35,7 @@ const arrayPoke = async () => {
   
   }}
   pokemonCards(allPoke)
+  console.log(allPoke)
 }
 
   const pokemonCards = (cards) => {
