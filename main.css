@@ -41,6 +41,9 @@ body{
 .b-logo img:hover{
     transform:scale(1.5);
    margin-bottom: 50px;
+   opacity:none;
+    filter: none;
+    filter: none;
 }
 
 .b-search{
@@ -65,7 +68,16 @@ img{
     border: 5px solid  ;
     border-radius: 20px;
     background-color: blueviolet;
+    cursor: pointer;
+    
 }
+
+img:hover{
+
+    opacity:0.9 ;
+    filter: contrast(100%);
+    filter: grayscale(100%);
+    }
 
 figcaption{
     text-align: center;
