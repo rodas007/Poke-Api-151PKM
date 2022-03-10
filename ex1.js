@@ -35,7 +35,7 @@ const arrayPoke = async () => {
   
   }}
   pokemonCards(allPoke)
-  console.log(allPoke)
+  //console.log(allPoke)
 }
 
   const pokemonCards = (cards) => {
@@ -56,11 +56,11 @@ if(card.name.toLowerCase().includes(input$$.value.toLowerCase())){
       const span2$$ = document.createElement("span");
       const descriptionType1$$ = document.createElement("p");
       const descriptionType2$$ = document.createElement("p");
-      titulo$$.textContent = card.name; 
+      titulo$$.textContent = card.name + " N.º" + card.id; 
       image$$.src = card.sprites.other["official-artwork"].front_default;
     
       descriptionType1$$.textContent = card.types[0].type.name;
-      descriptionType2$$.textContent = card.types[1]?.type.name
+      //descriptionType2$$.textContent = card.types[1]?.type.name
       figure$$.appendChild(titulo$$);
       figure$$.appendChild(image$$);
       //figure$$.appendChild(span$$)
@@ -68,7 +68,7 @@ if(card.name.toLowerCase().includes(input$$.value.toLowerCase())){
       figure$$.appendChild(div$$)
       div$$.appendChild(descriptionType1$$)
       //span$$.className=("type1")
-      div$$.appendChild(descriptionType2$$)
+      //div$$.appendChild(descriptionType2$$)
       //span2$$.className=("type2")
       //span$$.appendChild(descriptionType1$$)
       //span$$.appendChild(descriptionType2$$)
