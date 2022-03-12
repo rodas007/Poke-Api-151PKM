@@ -38,8 +38,11 @@ body {
 
 .b-search {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-items: center;
   align-items: center;
+
 }
 
 .b-search input {
@@ -140,4 +143,9 @@ div {
 }
 .b-color__ice {
   background-color: #51c4e7;
+}
+
+audio{
+    padding-bottom: 10px;
+
 }
