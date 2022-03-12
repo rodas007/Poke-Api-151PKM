@@ -1,6 +1,7 @@
 
 const allPoke = [] 
 const main$$ = document.querySelector(".b-gallery")
+
 let sound = true;
 let miAudio = document.getElementById("Audio-2")
 let audioOff = document.getElementById("img")
@@ -41,21 +42,24 @@ const arrayPoke = async () => {
   const pokemonCards = (cards) => {
     main$$.innerHTML = '';
     
+
 for (const card of cards) {
   
 
 if(card.name.toLowerCase().includes(input$$.value.toLowerCase())){
-   // cards.map((card) => {
+   
+    
+    
 
-     
       const figure$$ = document.createElement("figure"); 
       const titulo$$ = document.createElement("h2");
       const image$$ = document.createElement("img");
       const div$$ = document.createElement("div");
-      const span$$ = document.createElement("span");
-      const span2$$ = document.createElement("span");
+      //const span$$ = document.createElement("span");
+      //const span2$$ = document.createElement("span");
       const descriptionType1$$ = document.createElement("p");
-      const descriptionType2$$ = document.createElement("p");
+      descriptionType1$$.className = "b-color__fire  b-color__water b-color__grass b-color__bug b-color__electric";
+      //const descriptionType2$$ = document.createElement("p");
       titulo$$.textContent = card.name + " N.º" + card.id; 
       image$$.src = card.sprites.other["official-artwork"].front_default;
     
@@ -74,21 +78,46 @@ if(card.name.toLowerCase().includes(input$$.value.toLowerCase())){
       //span$$.appendChild(descriptionType2$$)
       main$$.appendChild(figure$$)
       
-
-
-
-
+      switch (card.types[0].type.name) {
+        case "fire": descriptionType1$$.className = "b-card b-color__fire";
+            break;
+        case "water": descriptionType1$$.className = "b-card  b-color__water";
+            break;
+        case "grass": descriptionType1$$.className = "b-card  b-color__grass";
+            break;
+        case "electric": descriptionType1$$.className = "b-card  b-color__electric";
+            break;
+            case "bug": descriptionType1$$.className = "b-card b-color__bug";
+            break;
+        case "ghost": descriptionType1$$.className = "b-card  b-color__ghost";
+            break;
+        case "psychic": descriptionType1$$.className = "b-card  b-color__psychic";
+            break;
+        case "rock": descriptionType1$$.className = "b-card  b-color__rock";
+            break;
+        case "ground": descriptionType1$$.className = "b-card  b-color__ground";
+            break;
+        case "fighting": descriptionType1$$.className = "b-card  b-color__fighting";
+            break;
+        case "poison": descriptionType1$$.className = "b-card  b-color__poison";
+            break;
+          case "normal": descriptionType1$$.className = "b-card  b-color__normal";
+            break; 
+            case "fairy": descriptionType1$$.className = "b-card  b-color__fairy";
+            break;
+      }
+  }
 
   }
     };
-  };
-
-
-
+ 
 
   const input$$ = document.querySelector('input');
   input$$.addEventListener('input', () => pokemonCards(allPoke))
   
+
+
+
   
   arrayPoke();
   
