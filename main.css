@@ -54,7 +54,7 @@ img {
   height: 400px;
   border: 5px solid;
   border-radius: 20px;
-  background-color: blueviolet;
+  background-color: rgb(22, 200, 82);
   cursor: pointer;
 }
 
@@ -79,7 +79,7 @@ h2 {
 figure {
   border: 5px solid;
   border-radius: 20px;
-  background-color: aquamarine;
+  background-color: rgb(255, 255, 255);
 }
 
 p {
@@ -95,41 +95,49 @@ div {
 }
 
 .b-color__grass {
-  background-color: #9BCC50;
+  background-color: #9bcc50;
 }
 .b-color__water {
-  background-color: #4592C4;
+  background-color: #4592c4;
 }
 .b-color__fire {
-  background-color: #FD7D24;
+  background-color: #fd7d24;
 }
 .b-color__bug {
-  background-color: #729F3F;
+  background-color: #729f3f;
 }
 .b-color__electric {
-  background-color: #EED535;
+  background-color: #eed535;
 }
 .b-color__normal {
-  background-color: #A4ACAF;
+  background-color: #a4acaf;
 }
 .b-color__poison {
-  background-color: #B97FC9;
+  background-color: #b97fc9;
 }
 .b-color__ghost {
-  background-color: #7B62A3;
+  background-color: #7b62a3;
 }
 .b-color__psychic {
-    background-color: #F471BD;
-  }
-  .b-color__rock {
-    background-color: #A38C21;
-  }
-  .b-color__ground {
-    background-color: #AB9842;
-  }
-  .b-color__fighting {
-    background-color: #D56723;
-  }
-  .b-color__fairy{
-    background-color: #FDB9E9;
-  }
+  background-color: #f471bd;
+}
+.b-color__rock {
+  background-color: #a38c21;
+}
+.b-color__ground {
+    background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background-color: #f7de3f;
+}
+.b-color__fighting {
+  background-color: #d56723;
+}
+.b-color__fairy {
+  background-color: #fdb9e9;
+}
+.b-color__dragon {
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background-color: #53a4cf;
+}
+.b-color__ice {
+  background-color: #51c4e7;
+}
