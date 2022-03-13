@@ -12,6 +12,13 @@ function sonido() {
     miAudio.play();
   } else miAudio.pause();
 }
+function soundsPoke() {
+  if (soundsPoke) {
+    miAudio.src = "./assets/audio/1.flac";
+    miAudio.volume = 0.15;
+    miAudio.play();
+  } else miAudio.pause();
+}
 
 const arrayPoke = async () => {
   if (allPoke.length === 0) {
@@ -36,7 +43,7 @@ const pokemonCards = (cards) => {
       const div$$ = document.createElement("div");
       const height$$ = document.createElement("span");
       const weight$$ = document.createElement("span");
-      const audio$$ = document.createElement("audio");
+      //const audio$$ = document.createElement("audio");
 
       const descriptionType1$$ = document.createElement("p");
       titulo$$.textContent = card.name + " N.º" + card.id;
@@ -49,14 +56,16 @@ const pokemonCards = (cards) => {
       figure$$.appendChild(div$$);
       figure$$.appendChild(height$$);
       figure$$.appendChild(weight$$);
-      image$$.appendChild(audio$$);
+      //image$$.appendChild(audio$$);
       div$$.appendChild(descriptionType1$$);
       main$$.appendChild(figure$$);
       
 
       switch (card.id) {
         case 1:
-         // image$$.insertAdherentHTML += `onclick="sonido()" `
+         
+          image$$.setAttribute('onclick','soundsPoke()')
+          
       }
       switch (card.types[0].type.name) {
         case "fire":
